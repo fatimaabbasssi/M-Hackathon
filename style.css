@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    background-color: #f3f3f3;
+}
+
+.all-main{
+    margin-top: 2em;
+}
+
+
+
+
+   /********************************* forms styling ********************************/
+.form-main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 2em 0 !important;
+
+}
+
+.form{
+    padding: 2em;
+    border: 3px solid rgb(0, 75, 107) !important;
+    max-width:370px ;
+    height: auto;
+    border-radius: 10px;
+    
+}
+
+.form:hover{
+    
+    box-shadow: 0 0 10px rgba(25, 135, 109, 0.6), 0 0 20px rgba(25, 135, 84, 0.4); 
+}
+
+form p{
+    cursor: pointer;
+}

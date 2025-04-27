@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Task Management App</title>
+  <link rel="stylesheet" href="../css/index.css">
+  
+  <!-- Correct FontAwesome link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<style>
+   .btn-danger{
+    background: #2A7B9B;
+    border: none;
+    outline: none;
+    padding: 10px;
+  border-radius: 7px;
+  background: #22C1C3;
+background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+ }
+
+ #taskList{
+  background-color: beige;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+ }
+</style>
+<body>
+
+  <!-- SIDEBAR (Navbar on small screen) -->
+  <nav class="sidebar" id="sidebar">
+    <h2>Mini Hackathon</h2>
+    <ul>
+      <li><a href="#">Dashboard</a></li>
+      <li><a href="./todo.html">Add Blog</a></li>
+    </ul>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <div class="main">
+    <header>
+      <button class="menu-toggle" id="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </button>
+      <h1 id="page-title">New Task</h1>
+    </header>
+  
+    <!-- Wrap sections in main-content -->
+    <div class="main-content">
+      <section id="new-task" class="page-section">
+      <!-- Task List Container -->
+<div id="taskList"></div>
+      </section>
+  
+      <section id="pending-tasks" class="page-section">
+        <h2>Pending Tasks</h2>
+        <!-- Add content for Pending Tasks here -->
+      </section>
+  
+      <section id="completed-tasks" class="page-section">
+        <h2>Completed Tasks</h2>
+        <!-- Add content for Completed Tasks here -->
+      </section>
+    </div>
+  </div>
+  
+  
+  <!-- JavaScript -->
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const menuToggle = document.getElementById('menu-toggle');
+      const sidebar = document.getElementById('sidebar');
+      const closeBtn = document.getElementById('close-btn');
+  
+      menuToggle.addEventListener('click', () => {
+        sidebar.classList.toggle('active');
+      });
+  
+      closeBtn.addEventListener('click', () => {
+        sidebar.classList.remove('active');
+      });
+    });
+  </script>
+
+
+
+<script type="module" src="../Js/getTask.js"></script>
+</body>
+</html>

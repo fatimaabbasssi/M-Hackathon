@@ -1,0 +1,168 @@
+/* Reset & Smooth Scroll */
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  display: flex;
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  background: #f1f5f9;
+}
+
+/* Sidebar (Navbar on small screens) */
+.sidebar {
+  width: 250px;
+  background: #2A7B9B;
+  background: linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
+  color: #fff;
+  padding: 30px 0;
+  position: fixed;
+  height: 100vh;
+  overflow-y: auto;
+  transition: transform 0.3s ease;
+  z-index: 1000;
+}
+
+.sidebar h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0 1rem;
+}
+
+.sidebar ul li + li { margin-top: 0.5rem; }
+
+.sidebar ul li a {
+  display: block;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #f1f5f9;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.sidebar ul li a:hover,
+.sidebar ul li a.active {
+  background: #40916c;
+}
+
+
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: #2d6a4f;
+  cursor: pointer;
+}
+
+
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    display: none; 
+  }
+@media (max-width: 768px) {
+    .sidebar {
+      transform: translateX(-100%);
+      transition: transform 0.3s ease;
+    }
+  
+    .sidebar.active {
+      transform: translateX(0);
+    }
+  
+    .main {
+      margin-left: 0;
+      width: 100%;
+    }
+  
+    .menu-toggle {
+      display: block;
+    }
+  }
+
+
+  /* Main Content */
+.main {
+    margin-left: 250px;
+    width: calc(100% - 250px);
+    padding: 2rem;
+    transition: margin-left 0.3s ease;
+  }
+  
+ 
+  .main-content {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 20px; 
+    justify-content: space-between;
+  }
+  
+
+  .page-section {
+    background: #fff;
+    padding: 1.5rem;
+    margin-top: 1rem;
+    width: calc(50% - 10px); 
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    background: #2A7B9B;
+    background: linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
+  }
+
+
+
+
+  /* Cross button styling */
+
+  
+  /* Jab chhoti screen ho tab dikhana */
+  @media (max-width: 768px) {
+    .close-btn {
+      display: block;
+    }
+  }
+
+
+  @media (max-width: 768px) {
+    .main-content {
+      flex-direction: column; 
+    }
+  
+    .page-section {
+      width: 100%; 
+    }
+  }
+
+  @media (max-width: 768px) {
+    .sidebar {
+      transform: translateX(-100%);
+      transition: transform 0.3s ease;
+    }
+    
+    .sidebar.active {
+      transform: translateX(0);
+    }
+    
+    .main {
+      margin-left: 0;
+      width: 100%;
+    }
+    
+    .menu-toggle {
+      display: block;
+    }
+  }
+  
