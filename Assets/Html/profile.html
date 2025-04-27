@@ -35,6 +35,11 @@ background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1
  flex-direction: column;
  gap: 1em;
  }
+
+ .main-column{
+    display: flex;
+    flex-direction: column;
+ }
 </style>
 <body>
 
@@ -58,7 +63,7 @@ background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1
     </header>
   
     <!--  main-content -->
-    <div class="main-content">
+    <div class="main-content main-column">
         <button id="signOut" class="p-2 bg-info signout rounded mx-auto mt-2 btn-danger" style="border: none; margin-left: -5em;">signOut</button>
 
 

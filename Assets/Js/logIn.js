@@ -39,15 +39,6 @@ document.getElementById("log-in")?.addEventListener("submit" , logInForm);
 
 
 
-
-
-
-
-
-
-
-
-
 // forgot password
 
 
@@ -62,18 +53,6 @@ let forgotPassword = async () =>{
 }
 
 document.getElementById("forgot-Pass")?.addEventListener("click" , forgotPassword);
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 // signIn with Google || continue with Google
