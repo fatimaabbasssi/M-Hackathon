@@ -25,8 +25,9 @@ background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1
  #taskList{
   background-color: beige;
   padding: 5px;
-  display: flex;
-  justify-content: space-between;
+ display: flex;
+ flex-direction: column;
+ gap: 1em;
  }
 </style>
 <body>
@@ -49,7 +50,7 @@ background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1
       <h1 id="page-title">New Task</h1>
     </header>
   
-    <!-- Wrap sections in main-content -->
+    <!--  main-content -->
     <div class="main-content">
       <section id="new-task" class="page-section">
       <!-- Task List Container -->
@@ -58,17 +59,17 @@ background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1
   
       <section id="pending-tasks" class="page-section">
         <h2>Pending Tasks</h2>
-        <!-- Add content for Pending Tasks here -->
+     
       </section>
   
       <section id="completed-tasks" class="page-section">
         <h2>Completed Tasks</h2>
-        <!-- Add content for Completed Tasks here -->
+      
       </section>
+
+
     </div>
   </div>
-  
-  
   <!-- JavaScript -->
   <script>
     window.addEventListener('DOMContentLoaded', () => {

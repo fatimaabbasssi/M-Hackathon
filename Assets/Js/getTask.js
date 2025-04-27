@@ -3,19 +3,18 @@ import {
     collection, onSnapshot, doc, deleteDoc, db
   } from "../../config.js";
   
-  // Reference to Firestore collection "tasks"
+
   const tasksRef = collection(db, "tasks");
   
-  // Get the task list container in HTML
+
   const taskList = document.getElementById("taskList");
-  
-  // Real-time listener to fetch tasks from Firestore and render them on the page
+
   onSnapshot(tasksRef, (snapshot) => {
-    taskList.innerHTML = ""; // Clear existing tasks
+    taskList.innerHTML = ""; 
   
-    // Loop through the snapshot and display each task
+  
     snapshot.forEach((docSnap) => {
-      const data = docSnap.data(); // Get the task data
+      const data = docSnap.data(); 
       const taskDiv = document.createElement("div");
       taskDiv.className = "todo-item";
       
@@ -26,11 +25,11 @@ import {
         </button>
       `;
   
-      taskList.appendChild(taskDiv); // Append task to the task list
+      taskList.appendChild(taskDiv); 
     });
   });
   
-  // Function to delete task from Firestore
+
   window.deleteTask = async (id) => {
-    await deleteDoc(doc(db, "tasks", id)); // Remove task from Firestore
+    await deleteDoc(doc(db, "tasks", id));
   };
