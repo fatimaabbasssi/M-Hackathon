@@ -28,10 +28,19 @@ body{
 
 .form{
     padding: 2em;
-    border: 3px solid rgb(0, 75, 107) !important;
+    border: 3px solid rgb(0, 107, 95) !important;
     max-width:370px ;
     height: auto;
     border-radius: 10px;
+    background-color: rgb(228, 254, 248);
+
+    opacity: 0;
+    transform: translateY(50px);
+    animation: slideFadeIn 0.8s ease forwards;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: box-shadow 0.3s ease;
     
 }
 
@@ -40,6 +49,24 @@ body{
     box-shadow: 0 0 10px rgba(25, 135, 109, 0.6), 0 0 20px rgba(25, 135, 84, 0.4); 
 }
 
+@keyframes slideFadeIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .form:hover {
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+  }
+
+
 form p{
     cursor: pointer;
+}
+
+
+.btn-bg-custom{
+    background: #22C1C3;
+    background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%);
 }

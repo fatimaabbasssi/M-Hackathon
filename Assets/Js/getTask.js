@@ -21,7 +21,7 @@ import {
       taskDiv.innerHTML = `
         <span>${data.task}</span>
         <button class="btn btn-sm btn-danger" onclick="deleteTask('${docSnap.id}')">
-         Complete
+       <i class="fa-solid fa-check"></i>
         </button>
       `;
   

@@ -41,7 +41,7 @@
    margin-left: 5px;
  }
 
- .addTaskbtn{
+ .addTaskbtn , .signout{
     background: #2A7B9B;
     background: linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
  }
@@ -56,6 +56,7 @@
     <ul>
       <li><a href="./index.html"> Dashboard</a></li>
       <li><a href="#">Add Blog</a></li>
+      <li><a href="./profile.html">Profile</a></li>
     </ul>
   </nav>
 
@@ -79,18 +80,18 @@
   </div>
 
   
-  <button id="signOut" class="p-2 bg-info rounded mx-auto mt-2" style="border: none; margin-left: -5em;">signOut</button>
+  <!-- <button id="signOut" class="p-2 bg-info signout rounded mx-auto mt-2" style="border: none; margin-left: -5em;">signOut</button> -->
 
 </div>
 <script>
 
-let _signOut = () =>{
-    alert("Signed Out");
-    signOut(auth)  
-     window.location.replace('/index.html') 
-}
+// let _signOut = () =>{
+//     alert("Signed Out");
+//     signOut(auth)  
+//      window.location.pathname = '/index.html'
+// }
 
-document.getElementById("signOut").addEventListener("click" , _signOut);
+// document.getElementById("signOut").addEventListener("click" , _signOut);
 
 
     window.addEventListener('DOMContentLoaded', () => {

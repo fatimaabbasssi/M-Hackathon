@@ -94,6 +94,11 @@ body {
   }
 
 
+  .page-section h2 a{
+text-decoration: none;
+color: black;
+  }
+
   /* Main Content */
 .main {
     margin-left: 250px;

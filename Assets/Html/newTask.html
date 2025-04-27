@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>New-task</title>
+  <title>Task Management App</title>
   <link rel="stylesheet" href="../css/index.css">
   
   <!-- FontAwesome link -->
@@ -11,7 +11,6 @@
 </head>
 
 <style>
-
 
    .btn-danger{
     background: #2A7B9B;
@@ -25,11 +24,37 @@ background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1
  }
 
  #taskList{
+    margin-top: 2em;
   background-color: beige;
-  padding: 5px;
- display: flex;
- flex-direction: column;
- gap: 1em;
+width:100%;
+padding: 1em;
+border-radius: 15px;
+
+ }
+
+ .todo-item{
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+ gap: 2em 0em;
+ padding: 1em;
+
+ }
+
+ .btn-danger{
+    font-weight: bold;
+    color: aliceblue;
+ }
+
+ @media (max-width:450px){
+    .todo-item{
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+ gap: 2em 0em;
+ padding: 0.4em;
+
+ }
  }
 </style>
 <body>
@@ -40,12 +65,10 @@ background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1
     <ul>
       <li><a href="./index.html">Dashboard</a></li>
       <li><a href="./todo.html">Add Blog</a></li>
-      <li><a href="./profile.html">Profile</a></li>
     </ul>
   </nav>
-
-  <!-- MAIN CONTENT -->
-  <div class="main">
+ <!-- MAIN CONTENT -->
+ <div class="main">
     <header>
       <button class="menu-toggle" id="menu-toggle">
         <i class="fas fa-bars"></i>
@@ -55,21 +78,7 @@ background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1
   
     <!--  main-content -->
     <div class="main-content">
-      <section id="new-task" class="page-section">
-        <h2> <a href="./newTask.html"> <i class="fa-solid fa-list-check"></i> New Tasks</a></h2>
-      <!-- Task List Container -->
-<!-- <div id="taskList"></div> -->
-      </section>
-  
-      <section id="pending-tasks" class="page-section">
-        <h2> <a href="./"> <i class="fa-solid fa-bars-progress"></i> Pending Tasks</a></h2>
-     
-      </section>
-  
-      <section id="completed-tasks" class="page-section">
-        <h2> <a href=""> <i class="fa-solid fa-check"></i> Complete Tasks</a></h2>
-      
-      </section>
+      <div id="taskList"></div>
 
 
     </div>
